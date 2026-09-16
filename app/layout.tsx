@@ -23,9 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
       <body>
         <MotionProvider>
-          <SiteHeader />
           {children}
-          <PersistentDemo />
         </MotionProvider>
       </body>
     </html>

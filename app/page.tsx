@@ -1,8 +1,9 @@
-import { ExperienceJourney } from "@/components/immersive/experience-journey";
-import { SiteFooter } from "@/components/site/site-footer";
-import { getScenes } from "@/lib/cms/adapter";
+import { WalkaroundViewer } from "@/components/immersive/walkaround-viewer";
 
-export default async function HomePage() {
-  const scenes = await getScenes();
-  return <><ExperienceJourney scenes={scenes} /><SiteFooter /></>;
+export default function Home() {
+  return (
+    <main>
+      <WalkaroundViewer />
+    </main>
+  );
 }
