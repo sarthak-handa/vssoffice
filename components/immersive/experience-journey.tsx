@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -28,6 +29,15 @@ export function ExperienceJourney({ scenes }: { scenes: ExperienceScene[] }) {
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    
+    // Animate text reveal
+    gsap.utils.toArray<HTMLElement>(".scene-copy, .journey-closing h2").forEach((elem) => {
+      gsap.fromTo(elem, { y: 30, opacity: 0 }, {
+        y: 0, opacity: 1, duration: 1, ease: "power3.out",
+        scrollTrigger: { trigger: elem, start: "top 85%" }
+      });
+    });
+
     const triggers = sections.current.map((section, index) => {
       if (!section) return null;
       return ScrollTrigger.create({
@@ -61,7 +71,7 @@ export function ExperienceJourney({ scenes }: { scenes: ExperienceScene[] }) {
 
       {scenes.map((scene, index) => (
         <section className={`story-scene scene-${scene.slug}`} key={scene.slug} ref={(element) => { sections.current[index] = element; }}>
-          <img className="scene-still" src={scene.fallbackImage} alt={`Concept render: ${scene.title}`} loading={index === 0 ? "eager" : "lazy"} />
+          <Image className="scene-still" src={scene.fallbackImage} alt={`Concept render: ${scene.title}`} fill style={{ objectFit: "cover" }} priority={index === 0} sizes="100vw" />
           <div className="scene-scrim" />
           <div className="scene-copy">
             <p className="eyebrow">0{index + 1} / {scene.sceneType}</p>

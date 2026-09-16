@@ -61,10 +61,25 @@ export type Project = {
   caseStudyContent: string;
 };
 
+export type Testimonial = {
+  client: string;
+  role: string;
+  quote: string;
+  projectContext?: string;
+};
+
+export type FAQ = {
+  question: string;
+  answer: string;
+  category: string;
+};
+
 export type SiteContent = {
   solutions: Solution[];
   products: Product[];
   brands: Brand[];
   scenes: ExperienceScene[];
   projects: Project[];
+  testimonials: Testimonial[];
+  faqs: FAQ[];
 };

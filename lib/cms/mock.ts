@@ -86,4 +86,12 @@ export const mockContent: SiteContent = {
   ],
   brands: [],
   projects: [],
+  testimonials: [
+    { client: "Private Client", role: "Homeowner", quote: "VSS Salesco brought clarity to what could have been an overwhelming smart-home build. Seeing the system in the experience centre completely changed our specification.", projectContext: "Residential automation & cinema" },
+    { client: "Corporate Director", role: "Technology firm", quote: "The access control and conferencing systems were planned meticulously. The transition from demonstration to installation was seamless.", projectContext: "Commercial security & communication" }
+  ],
+  faqs: [
+    { question: "Can I bring my own architect or interior designer to a consultation?", answer: "Yes. We actively encourage bringing your design team. Technology should integrate with architecture, not fight against it. We regularly coordinate with architects, M&E consultants and interior designers.", category: "Process" },
+    { question: "Do you install systems, or just supply equipment?", answer: "VSS Salesco is an end-to-end integrator. We plan, supply, install and maintain the systems. We do not operate as a standard box-shifting retailer.", category: "Services" }
+  ]
 };

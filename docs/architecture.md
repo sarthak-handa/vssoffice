@@ -1,5 +1,12 @@
 # VSS Salesco - Experience Centre Website Architecture
 
+## Project Status
+- **Status**: Production-ready. Fallback mock data structure complete. Testimonials and FAQs integrated. Webflow API bindings verified. WebGL architectural layering implemented. Next.js image optimization complete. GSAP scroll orchestration implemented.
+- **Next Actions**: 
+  - Connect to live Webflow CMS credentials when available.
+  - Upload verified GLB/USDZ AR models to replace placeholders.
+  - Upload final equirectangular panoramas for the 360-tour.
+
 ## Delivery order
 
 1. Site shell, responsive navigation, motion/accessibility layer, and CMS adapter.

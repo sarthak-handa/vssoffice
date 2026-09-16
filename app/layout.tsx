@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Outfit, Inter } from "next/font/google";
 import "./globals.css";
 import { MotionProvider } from "@/components/site/motion-provider";
 import { SiteHeader } from "@/components/site/site-header";
 import { PersistentDemo } from "@/components/site/persistent-demo";
+
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit", display: "swap" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
 export const metadata: Metadata = {
   title: "VSS Salesco | Security, intelligence and cinema",
@@ -10,6 +14,20 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://vsssalesco.example"),
 };
 
+export const viewport: Viewport = {
+  themeColor: "#201b18",
+};
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body><MotionProvider><SiteHeader />{children}<PersistentDemo /></MotionProvider></body></html>;
+  return (
+    <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
+      <body>
+        <MotionProvider>
+          <SiteHeader />
+          {children}
+          <PersistentDemo />
+        </MotionProvider>
+      </body>
+    </html>
+  );
 }
