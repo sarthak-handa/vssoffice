@@ -67,10 +67,10 @@ img { display: block; max-width: 100%; }
 .scene-facade .scene-still { object-position: left center; opacity: .55; filter: saturate(.75) contrast(1.06) brightness(.42); }
 .scene-theatre .scene-still { object-position: center; filter: saturate(.65) contrast(1.1) brightness(.58); }
 .scene-scrim { z-index: -1; background: linear-gradient(90deg, rgba(13,10,8,.89) 0%, rgba(20,15,12,.5) 44%, rgba(19,14,11,.22) 75%, rgba(13,10,8,.5) 100%), linear-gradient(0deg, rgba(9,7,6,.72), transparent 55%); }
-.scene-copy { max-width: 51rem; animation: reveal .8s both; }
-.scene-copy h1, .scene-copy h2, .journey-closing h2 { margin: 0; font-size: clamp(3rem, 7.4vw, 8.1rem); font-weight: 500; letter-spacing: -.078em; line-height: .86; }
-.scene-copy h2 { font-size: clamp(3.4rem, 8vw, 8rem); }
-.scene-copy em, .journey-closing em { color: #e7b378; font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+.scene-copy { position: relative; max-width: 45rem; padding: 0 var(--space) 2rem; color: #f2e3cd; z-index: 3; mix-blend-mode: difference; }
+.scene-copy h1 { margin: 0 0 1rem; font-size: clamp(3rem, 6vw, 6.2rem); font-weight: 400; line-height: 1; letter-spacing: -.03em; color: #fff; }
+.scene-copy h2 { margin: 0 0 1rem; font-size: clamp(2.5rem, 5vw, 5rem); font-weight: 400; line-height: 1; letter-spacing: -.03em; color: #fff; }
+.scene-copy h1 em, .scene-copy h2 em { display: block; color: #d4a373; font-style: normal; font-family: "Times New Roman", serif; font-weight: 400; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2.1rem; }
 .scene-actions { display: flex; flex-wrap: wrap; gap: .5rem; max-width: 36rem; margin-top: 1.75rem; }
 .hotspot-copy { display: inline-flex; gap: .5rem; align-items: center; border: 1px solid rgba(255,255,255,.32); border-radius: 99px; padding: .6rem .75rem; color: #fff; background: rgba(17,13,11,.3); font-size: .69rem; backdrop-filter: blur(7px); transition: background .2s ease; }
