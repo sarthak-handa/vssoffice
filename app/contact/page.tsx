@@ -1,0 +1,7 @@
+import { MessageCircle, Phone, Pin, Clock3 } from "lucide-react";
+import { PageHero } from "@/components/site/page-hero";
+import { SiteFooter } from "@/components/site/site-footer";
+
+export default function ContactPage() {
+  return <><main className="page-main"><PageHero eyebrow="Contact VSS Salesco" title={<>Come in. Look closer.<br /><em>Ask better questions.</em></>} description="The experience centre, address, telephone, WhatsApp destination and operating hours should be replaced with verified business contact information before launch." image="/media/reception-preview.png" /><section className="content-section"><div className="contact-grid"><article className="contact-card"><Pin size={20} color="#994a2d" /><h3>Experience Centre</h3><p>Verified address and map embed to be supplied.</p><a href="/book-demo">Book a visit ↗</a></article><article className="contact-card"><Phone size={20} color="#994a2d" /><h3>Call VSS Salesco</h3><p>Verified call number to be supplied.</p><a href="/book-demo">Request a callback ↗</a></article><article className="contact-card"><MessageCircle size={20} color="#994a2d" /><h3>WhatsApp</h3><p>Connect a verified WhatsApp Business destination before launch.</p><a href="/book-demo">Start an enquiry ↗</a></article><article className="contact-card"><Clock3 size={20} color="#994a2d" /><h3>Operating hours</h3><p>Verified opening hours to be supplied for the experience centre.</p><a href="/experience">Explore the preview ↗</a></article></div></section></main><SiteFooter /></>;
+}
