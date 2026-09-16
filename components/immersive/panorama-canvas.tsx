@@ -1,4 +1,5 @@
 "use client";
+import { Suspense } from "react";
 
 import { Canvas } from "@react-three/fiber";
 import { DeviceOrientationControls, OrbitControls, useTexture } from "@react-three/drei";
@@ -21,7 +22,9 @@ export function PanoramaCanvas({ src, gyro }: { src: string; gyro: boolean }) {
       dpr={[1, 1.5]} 
       gl={{ antialias: false, powerPreference: "high-performance" }}
     >
-      <Panorama src={src} />
+      <Suspense fallback={null}>
+        <Panorama src={src} />
+      </Suspense>
       <OrbitControls 
         enablePan={false} 
         enableZoom={true} 
